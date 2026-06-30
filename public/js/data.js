@@ -125,7 +125,7 @@
   };
 
   // How many numbers to generate per country.
-  const COUNTS = { Kenya: 22, USA: 26, Canada: 14, UK: 12, China: 8 };
+  const COUNTS = { Kenya: 9, USA: 26, Canada: 14, UK: 12, China: 8 };
 
   function servicesFor(country) {
     return Object.keys(SERVICE_RULES).filter((svc) =>
