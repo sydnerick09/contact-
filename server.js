@@ -25,7 +25,10 @@ const PREMIUM_PRICE_USD = Number(process.env.PREMIUM_PRICE_USD || 2);
 const SUPPORT_EMAIL = process.env.SUPPORT_EMAIL || 'support@numora.example';
 const WHATSAPP_CONTACT = process.env.WHATSAPP_CONTACT || '';
 
-const ORDERS_FILE = path.join(__dirname, 'orders.json');
+// On serverless (Vercel) the project FS is read-only — only /tmp is writable.
+const ORDERS_FILE = process.env.VERCEL
+  ? path.join('/tmp', 'orders.json')
+  : path.join(__dirname, 'orders.json');
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -42,7 +45,12 @@ function readOrders() {
 }
 
 function writeOrders(orders) {
-  fs.writeFileSync(ORDERS_FILE, JSON.stringify(orders, null, 2));
+  try {
+    fs.writeFileSync(ORDERS_FILE, JSON.stringify(orders, null, 2));
+  } catch (err) {
+    // Don't fail the request if the platform FS is read-only.
+    console.warn('Could not persist orders:', err.message);
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -128,12 +136,18 @@ app.get('/api/orders/:reference', (req, res) => {
   res.json({ ok: true, order });
 });
 
-app.listen(PORT, () => {
-  console.log(`\n  Numora running → http://localhost:${PORT}`);
-  if (!PAYSTACK_PUBLIC_KEY) {
-    console.log('  ⚠  No Paystack keys set yet — checkout runs in DEMO mode.');
-    console.log('     Copy .env.example to .env and add your keys.\n');
-  } else {
-    console.log('  ✓ Paystack keys loaded.\n');
-  }
-});
+// Export the app so Vercel can use it as a serverless handler.
+module.exports = app;
+
+// Only bind a port when run directly (local dev / `npm start`).
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`\n  Numora running → http://localhost:${PORT}`);
+    if (!PAYSTACK_PUBLIC_KEY) {
+      console.log('  ⚠  No Paystack keys set yet — checkout runs in DEMO mode.');
+      console.log('     Copy .env.example to .env and add your keys.\n');
+    } else {
+      console.log('  ✓ Paystack keys loaded.\n');
+    }
+  });
+}
