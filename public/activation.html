@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activation Services — TikTok, Instagram & WhatsApp | Numora</title>
+  <meta name="description" content="Activate TikTok, Instagram and WhatsApp with verified numbers from the USA, Canada, Kenya or China. Pay with Paystack, delivered in 30–60 minutes." />
+  <link rel="preconnect" href="https://api.dicebear.com" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <span>⚡ Activations delivered <strong>30–60 minutes</strong> after payment</span>
+    <span class="dot">•</span>
+    <span>💳 Secure checkout by Paystack</span>
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="/"><span class="brand-mark">◈</span> Numora</a>
+    <nav class="nav-links">
+      <a href="/#numbers">Numbers</a>
+      <a href="/activation.html" class="active">Activation</a>
+      <a href="/#how">How it works</a>
+      <a href="/#testimonials">Reviews</a>
+      <a href="/terms.html">Terms</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="/#numbers">Browse numbers</a>
+  </header>
+
+  <section class="hero compact">
+    <div class="hero-inner single">
+      <div class="hero-text center">
+        <span class="pill">🚀 Choose a platform · choose a country</span>
+        <h1>Activate <span class="grad">TikTok, Instagram & WhatsApp</span></h1>
+        <p class="lead">
+          Pick the platform you want to verify, then choose which country's number to use.
+          Kenyan activations are charged in <strong>KES</strong>; all others in <strong>USD</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main id="activation-root" class="activation-root"><!-- JS --></main>
+
+  <section class="terms-cta">
+    <div class="terms-card">
+      <h2>Good to know</h2>
+      <ul>
+        <li>📲 Have your account open and ready to receive the verification code.</li>
+        <li>⏱ Codes/numbers are delivered <strong>30–60 minutes</strong> after payment.</li>
+        <li>💬 WhatsApp is the only service that accepts <strong>Chinese</strong> numbers.</li>
+        <li>🔁 One-way service — keep a separate active line to receive your code.</li>
+      </ul>
+      <a class="btn btn-ghost" href="/terms.html">Read full Terms & Conditions →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-cols">
+      <div>
+        <a class="brand" href="/"><span class="brand-mark">◈</span> Numora</a>
+        <p class="muted">Verified numbers & social activation. USA · Canada · Kenya · UK · China.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/#numbers">Numbers</a>
+        <a href="/activation.html">Activation</a>
+        <a href="/#how">How it works</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="/terms.html">Terms & Conditions</a>
+        <a id="footer-mail" href="#">Contact</a>
+        <a id="footer-wa" href="#">WhatsApp</a>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Numora. All rights reserved. For lawful account verification use only.</p>
+  </footer>
+
+  <!-- checkout modal -->
+  <div class="modal" id="checkout-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="co-title">
+      <button class="modal-x" data-close aria-label="Close">×</button>
+      <h3 id="co-title">Complete your order</h3>
+      <div id="co-summary" class="co-summary"></div>
+      <label class="field">
+        <span>Email for receipt & delivery</span>
+        <input type="email" id="co-email" placeholder="you@example.com" required />
+      </label>
+      <label class="agree">
+        <input type="checkbox" id="co-agree" />
+        <span>I agree to the <a href="/terms.html" target="_blank">Terms & Conditions</a>, including 30–60 minute delivery and using a separate active line to receive the service.</span>
+      </label>
+      <button class="btn btn-primary btn-block" id="co-pay">Pay now</button>
+      <p class="co-note" id="co-note"></p>
+    </div>
+  </div>
+
+  <div class="modal" id="success-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card success" role="dialog" aria-modal="true">
+      <button class="modal-x" data-close aria-label="Close">×</button>
+      <div class="success-check">✓</div>
+      <h3>Payment received!</h3>
+      <p id="success-body"></p>
+      <button class="btn btn-primary btn-block" data-close>Done</button>
+    </div>
+  </div>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="/js/data.js"></script>
+  <script src="/js/payment.js"></script>
+  <script src="/js/activation.js"></script>
+</body>
+</html>

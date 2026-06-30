@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions | Numora</title>
+  <meta name="description" content="Numora Terms & Conditions — delivery, payments, currency and acceptable use." />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="/"><span class="brand-mark">◈</span> Numora</a>
+    <nav class="nav-links">
+      <a href="/#numbers">Numbers</a>
+      <a href="/activation.html">Activation</a>
+      <a href="/#how">How it works</a>
+      <a href="/terms.html" class="active">Terms</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="/#numbers">Browse numbers</a>
+  </header>
+
+  <main class="legal">
+    <h1>Terms & Conditions</h1>
+    <p class="muted">Last updated: <span id="updated"></span>. By placing an order you agree to the terms below.</p>
+
+    <h2>1. The agreement</h2>
+    <p>
+      These Terms form a binding agreement between you ("the buyer") and Numora ("we", "us").
+      By paying for a number or an activation service, you confirm that you have read,
+      understood and accepted every clause on this page.
+    </p>
+
+    <h2>2. Delivery time</h2>
+    <p>
+      Numbers and activation codes are delivered <strong>30 minutes to 1 hour</strong> after a
+      <strong>confirmed payment</strong>. Delivery is sent to the email address you provide at checkout.
+      Delivery times may occasionally be longer during high demand; we will keep you informed.
+    </p>
+
+    <h2>3. One-way service &mdash; keep a separate active line</h2>
+    <p>
+      Activation is performed on a <strong>one-way</strong> basis. To receive your service
+      (the verification code or confirmation), <strong>you must have a separate, active number</strong>
+      ready. The number you purchase is used to activate your chosen platform; it is not a line you
+      use to make or receive ordinary calls.
+    </p>
+
+    <h2>4. Pricing &amp; currency</h2>
+    <ul>
+      <li>Individual numbers are priced from <strong>$1.30 to $1.70</strong> each.</li>
+      <li><strong>Kenyan numbers</strong> are charged in <strong>Kenyan Shillings (KES)</strong>,
+          converted automatically from USD at checkout.</li>
+      <li>Numbers from <strong>all other countries</strong> (USA, Canada, UK, China) are charged in
+          <strong>US Dollars (USD)</strong>.</li>
+      <li>Only <strong>Kenyan</strong> numbers can be purchased instantly. Numbers from other countries
+          are <strong>Pro / Premium</strong> and require a <strong>Premium unlock of $2</strong> to be
+          approved and delivered.</li>
+    </ul>
+
+    <h2>5. Payments</h2>
+    <p>
+      All payments are processed securely through <strong>Paystack</strong>. We do not store your card
+      details. A payment is only "confirmed" once Paystack reports it as successful and our server has
+      verified it.
+    </p>
+
+    <h2>6. Refunds</h2>
+    <p>
+      Because numbers are a limited digital good, all sales are final once a number or code has been
+      delivered. If we are unable to deliver a working number after a confirmed payment, you are entitled
+      to a replacement number or a full refund of that order.
+    </p>
+
+    <h2>7. Acceptable use</h2>
+    <p>
+      Numbers and activation services are provided for <strong>lawful account verification only</strong>.
+      You agree not to use them for fraud, harassment, spam, impersonation or any activity that breaks the
+      law or the terms of the platform you are activating. We may refuse or cancel any order we reasonably
+      believe is intended for unlawful use.
+    </p>
+
+    <h2>8. No guarantee of third-party platforms</h2>
+    <p>
+      TikTok, Instagram, WhatsApp and other platforms are independent third parties. We do not control
+      their policies and cannot guarantee that an activated account will not later be restricted by the
+      platform itself for reasons unrelated to the number.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>Questions about these Terms? Email <a id="terms-mail" href="#">our support team</a>.</p>
+
+    <a class="btn btn-primary" href="/#numbers">← Back to numbers</a>
+  </main>
+
+  <footer class="footer">
+    <p class="copyright">© <span id="year"></span> Numora. All rights reserved. For lawful account verification use only.</p>
+  </footer>
+
+  <script src="/js/payment.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent = new Date().toLocaleDateString();
+    window.Numora.ready.then((cfg) => {
+      const m = document.getElementById('terms-mail');
+      if (m) m.href = 'mailto:' + cfg.supportEmail;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numora — Verified Numbers for TikTok, Instagram & WhatsApp Activation</title>
+  <meta name="description" content="Buy verified phone numbers from the USA, Canada, Kenya, UK and China. Activate TikTok, Instagram and WhatsApp. Delivered 30–60 minutes after payment via Paystack." />
+  <link rel="preconnect" href="https://api.dicebear.com" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <!-- announcement -->
+  <div class="topbar">
+    <span>⚡ Numbers delivered <strong>30–60 minutes</strong> after payment</span>
+    <span class="dot">•</span>
+    <span>🌍 USA · Canada · Kenya · UK · China</span>
+    <span class="dot">•</span>
+    <span>💳 Secure checkout by Paystack</span>
+  </div>
+
+  <!-- nav -->
+  <header class="nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">◈</span> Numora
+    </a>
+    <nav class="nav-links">
+      <a href="#numbers">Numbers</a>
+      <a href="/activation.html">Activation</a>
+      <a href="#how">How it works</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="/terms.html">Terms</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#numbers">Browse numbers</a>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="pill">🔥 Trusted by 12,000+ buyers worldwide</span>
+        <h1>Verified numbers to activate<br /><span class="grad">TikTok, Instagram & WhatsApp</span></h1>
+        <p class="lead">
+          Genuine phone numbers from the <strong>USA, Canada, Kenya, UK</strong> and
+          <strong>China</strong>. Pick a city, pick a number, pay securely — and receive it
+          within <strong>30–60 minutes</strong>.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#numbers">Browse numbers →</a>
+          <a class="btn btn-ghost" href="/activation.html">Activation services</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="stat-count">—</strong><span>numbers in stock</span></div>
+          <div><strong>5</strong><span>countries</span></div>
+          <div><strong>$1.30+</strong><span>per number</span></div>
+          <div><strong>24/7</strong><span>delivery</span></div>
+        </div>
+      </div>
+      <div class="hero-feed">
+        <div class="feed-head"><span class="live-dot"></span> Live activations</div>
+        <ul id="live-feed" class="live-feed"><!-- JS --></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- activation services preview -->
+  <section class="services" id="services">
+    <h2 class="section-title">What do you want to activate?</h2>
+    <p class="section-sub">Choose a platform and we'll match you with the right country's number.</p>
+    <div class="service-grid">
+      <a class="service-card tiktok" href="/activation.html#tiktok">
+        <div class="service-ico">🎵</div>
+        <h3>TikTok activation</h3>
+        <p>Activate with an <strong>American</strong>, <strong>Kenyan</strong> or <strong>Canadian</strong> number.</p>
+        <span class="service-go">Activate TikTok →</span>
+      </a>
+      <a class="service-card instagram" href="/activation.html#instagram">
+        <div class="service-ico">📸</div>
+        <h3>Instagram activation</h3>
+        <p>Activate with a <strong>Kenyan</strong>, <strong>American</strong> or <strong>Canadian</strong> number.</p>
+        <span class="service-go">Activate Instagram →</span>
+      </a>
+      <a class="service-card whatsapp" href="/activation.html#whatsapp">
+        <div class="service-ico">💬</div>
+        <h3>WhatsApp activation</h3>
+        <p>Activate with a <strong>USA</strong>, <strong>Kenyan</strong>, <strong>Canadian</strong> or <strong>Chinese</strong> number only.</p>
+        <span class="service-go">Activate WhatsApp →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- numbers -->
+  <section class="numbers" id="numbers">
+    <div class="numbers-head">
+      <div>
+        <h2 class="section-title">Available numbers</h2>
+        <p class="section-sub">
+          Price shows in <strong>KES</strong> for Kenyan numbers and <strong>USD</strong> for the rest.
+        </p>
+      </div>
+      <input id="search" class="search" type="search" placeholder="Search city, area or number…" />
+    </div>
+
+    <div class="filters">
+      <div class="filter-row" id="country-filters">
+        <button class="chip active" data-country="all">All countries</button>
+        <button class="chip" data-country="Kenya">🇰🇪 Kenya</button>
+        <button class="chip" data-country="USA">🇺🇸 USA</button>
+        <button class="chip" data-country="Canada">🇨🇦 Canada</button>
+        <button class="chip" data-country="UK">🇬🇧 UK</button>
+        <button class="chip" data-country="China">🇨🇳 China</button>
+      </div>
+      <div class="filter-row" id="service-filters">
+        <button class="chip ghost active" data-service="all">All uses</button>
+        <button class="chip ghost" data-service="tiktok">🎵 TikTok</button>
+        <button class="chip ghost" data-service="instagram">📸 Instagram</button>
+        <button class="chip ghost" data-service="whatsapp">💬 WhatsApp</button>
+        <button class="chip ghost" data-service="available">✅ In stock only</button>
+      </div>
+    </div>
+
+    <div id="numbers-grid" class="numbers-grid"><!-- JS --></div>
+    <div id="numbers-empty" class="empty" hidden>No numbers match those filters.</div>
+  </section>
+
+  <!-- how it works -->
+  <section class="how" id="how">
+    <h2 class="section-title">How it works</h2>
+    <div class="steps">
+      <div class="step"><span class="step-n">1</span><h3>Pick a number</h3><p>Filter by country, city or the platform you want to activate.</p></div>
+      <div class="step"><span class="step-n">2</span><h3>Pay securely</h3><p>Checkout with Paystack. Kenyan numbers are charged in KES, all others in USD.</p></div>
+      <div class="step"><span class="step-n">3</span><h3>Receive in 30–60 min</h3><p>Your number is delivered after payment. Keep a backup number ready to receive your service.</p></div>
+    </div>
+  </section>
+
+  <!-- testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2 class="section-title">Real people, real activations</h2>
+    <p class="section-sub">Over 50 recent customers who activated their accounts with Numora numbers.</p>
+    <div class="marquee">
+      <div class="marquee-track" id="marquee-a"></div>
+    </div>
+    <div class="marquee reverse">
+      <div class="marquee-track" id="marquee-b"></div>
+    </div>
+  </section>
+
+  <!-- terms summary -->
+  <section class="terms-cta">
+    <div class="terms-card">
+      <h2>Before you buy</h2>
+      <ul>
+        <li>📦 Numbers are delivered <strong>30 minutes to 1 hour</strong> after a confirmed payment.</li>
+        <li>📲 Activation is one-way — keep a <strong>separate active number</strong> to receive your service.</li>
+        <li>🇰🇪 Only <strong>Kenyan</strong> numbers can be bought instantly. Other countries require the <strong>Premium</strong> unlock.</li>
+        <li>💵 Pricing is shown in KES for Kenya and USD everywhere else, adjusted automatically.</li>
+      </ul>
+      <a class="btn btn-ghost" href="/terms.html">Read full Terms & Conditions →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-cols">
+      <div>
+        <a class="brand" href="/"><span class="brand-mark">◈</span> Numora</a>
+        <p class="muted">Verified numbers & social activation. USA · Canada · Kenya · UK · China.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#numbers">Numbers</a>
+        <a href="/activation.html">Activation</a>
+        <a href="#how">How it works</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="/terms.html">Terms & Conditions</a>
+        <a id="footer-mail" href="#">Contact</a>
+        <a id="footer-wa" href="#">WhatsApp</a>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Numora. All rights reserved. For lawful account verification use only.</p>
+  </footer>
+
+  <!-- ===== Checkout modal (shared) ===== -->
+  <div class="modal" id="checkout-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="co-title">
+      <button class="modal-x" data-close aria-label="Close">×</button>
+      <h3 id="co-title">Complete your order</h3>
+      <div id="co-summary" class="co-summary"><!-- JS --></div>
+
+      <label class="field">
+        <span>Email for receipt & delivery</span>
+        <input type="email" id="co-email" placeholder="you@example.com" required />
+      </label>
+
+      <label class="agree">
+        <input type="checkbox" id="co-agree" />
+        <span>I agree to the <a href="/terms.html" target="_blank">Terms & Conditions</a>, including that my number is delivered 30–60 minutes after payment and that I must use a separate active line to receive the service.</span>
+      </label>
+
+      <button class="btn btn-primary btn-block" id="co-pay">Pay now</button>
+      <p class="co-note" id="co-note"></p>
+    </div>
+  </div>
+
+  <!-- ===== Success modal ===== -->
+  <div class="modal" id="success-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card success" role="dialog" aria-modal="true">
+      <button class="modal-x" data-close aria-label="Close">×</button>
+      <div class="success-check">✓</div>
+      <h3>Payment received!</h3>
+      <p id="success-body"></p>
+      <button class="btn btn-primary btn-block" data-close>Done</button>
+    </div>
+  </div>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="/js/data.js"></script>
+  <script src="/js/payment.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/testimonials.js"></script>
+</body>
+</html>
